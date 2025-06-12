@@ -22,7 +22,7 @@ def test_invalid_username(driver):
     login_page.enter_username("wrong_user")
     login_page.enter_password("password")
     login_page.submit()
-    assert "Ошибка входа" in login_page.get_error_message()
+    assert "Ошибка входа, не верный логин" in login_page.get_error_message()
 
 def test_invalid_password(driver):
     login_page = LoginPage(driver)
@@ -30,4 +30,4 @@ def test_invalid_password(driver):
     login_page.enter_username("admin")
     login_page.enter_password("wrong_pass")
     login_page.submit()
-    assert "Ошибка входа" in login_page.get_error_message()
+    assert "Ошибка входа, не верный пароль" in login_page.get_error_message()
