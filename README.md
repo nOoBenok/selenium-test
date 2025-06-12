@@ -11,8 +11,10 @@ git clone https://github.com/nOoBenok/selenium-test.git
 
 2. Установить зависимость
 
+python3 -m venv env
+source env/bin/activate
 pip install -r requirements.txt
 
 ## Запуск тестов
 
-pytest tests/test_login.py -v
+pytest -v tests/test_login.py
